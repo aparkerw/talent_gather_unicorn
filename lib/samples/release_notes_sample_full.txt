@@ -1,0 +1,270 @@
+Release Notes:
+
+
+0.8.0 ***************
+Features
+• simplified and streamlined event create process
+
+Small tweaks
+• added 'would recommend' to questionnaire
+• added additional GPA question options
+
+Bug fixes
+
+0.7.12 ***************
+Features
+
+Small tweaks
+• see which recruiters took a picture of a students resume
+
+Bug fixes
+
+0.7.11 ***************
+Features
+• Join requests/approvals now show in-app notifications
+
+Small tweaks
+• Students can now be filtered by skills, programs or recrutier
+• Candidate edit screen highlight "program" rows to make it easier to select the right ranking.
+• Processing candidates includes timeouts in case of spotty network coverage.  Much more robust process when the network is unreliable.
+• Long lists of relocation locations are easier to use
+• Zoom buttons were added in desktop mode
+• Users who reconcile a candidate no longer show up as the last editor on the list screen
+
+Bug fixes
+• directions to event location improved for some devices
+
+
+0.7.10 ***************
+Small tweaks
+• Process image later option is now green not gray.
+• Fix app crash for Nexus devices when showing event details with map.
+
+0.7.9 ***************
+Small tweaks
+• Event details candidates looks more clickable.
+
+0.7.8 ***************
+Features
+• bulk processing of local candidate images
+
+Small tweaks
+• users can now remove integrations keys
+• disk space now shows correctly for all users
+• improved users interactions and styles
+• slight re-order of questions to increase privacy
+• improved synchronization screen
+
+Bug fixes
+• Process resume images button is now disabled when no internet connection
+• corrected bug preventing the reconcile button from showing up on the candidates list page
+• prevent duplicated integration keys 
+
+0.7.7 ***************
+Features
+• resume images can now be rotated after capture
+• student forward data now include student resume
+
+Small tweaks
+• improved image capture menu and interface
+• app prompts before removal of collaborator from event
+• student forward data now aligns with event's questions
+• during resume processing the phones will not enter sleep mode
+• fixed parsing hanging and improved quality of parsing
+
+Bug fixes
+• event allows rejoin when the permissions has been revoked
+• it redirects the user to events screen after stop contributing in event view
+
+0.7.6 ***************
+Small tweaks
+• event export now allows toggle of resume text export
+• event export has distinct columns for each program in the event for better sorting
+• app prompts before rejecting event invite
+
+Bug fixes
+• fixed login issue some users were experiencing
+• fixed event access issue for iOS 8 users introduced in 0.7.5
+• fixed clear input issue in student filter
+
+0.7.5 ***************
+Features
+• candidates saved locally and synchronized later in case of poor network connectivity
+
+Small tweaks
+• imporved resume capture control interface
+
+0.7.4 ***************
+
+Bug fixes
+• interviews save from inteview screen not from candidate detail screen
+• updating the date of an event now saves correctly
+
+Small tweaks
+• increased offline event details accessibility
+• registration requires email confirmation
+• diagnostic screen works better when not logged in
+
+0.7.3 ***************
+• addressed android image rotate bug
+• event create list placeholder text now contextual
+• better diagnostic display for devices that don't support disc space check (iOS)
+
+0.7.2 ***************
+• fixed event create bug
+
+0.7.1 ***************
+• fixed event create bug
+
+0.7.0 ***************
+Features
+• view processing status right from the students list
+• simpler sign-in screen
+• simpler event create list interface for (skills, programs, relocation)
+• now see automatic summary data of candidate resume information
+• new diagnostics screen to analyze the operational health of the app
+• event details: start/end time, address, description, 
+parking
+• see event on a map and get driving directions
+
+Bug fixes
+• unpredictable navigation issue for iOS 9 users fixed
+
+Small tweaks
+• better email extraction logic
+• processing bar does not show on other students views
+• cancel event create prompts for confirmation so data is not lost
+• prevent swipe-back on resume image screen
+• candidate names are now uniformly capitalized (BOB becomes Bob)
+• touch students top to scroll to top of the view
+• process resume images from the student list
+• imporved perfomance in poor/no network situations
+
+
+0.6.6 ***************
+Features
+
+Bug fixes
+• event export button works again
+• reconcile now triggers student flow to the central database
+
+Small tweaks
+
+0.6.5 ***************
+Features
+
+Bug fixes
+• prevent accidental cancel during the capture of new students
+• enhanced performance for events with a large number of students
+
+Small tweaks
+• add client key from QR codes
+• event list now has group headers for lists by date and college
+• minor UI changes for students screen (more button, clear search)
+• student deletion now prompts for verification
+
+
+0.6.4 ***************
+Features
+• easily reconcile missing data while examining resume images
+• added the ability to have multiple owners of an event
+
+Small tweaks
+• resume processing and cloud sharing is now done with one button
+
+
+0.6.3 ***************
+Bug fixes
+• fixed skills & relocations export bug
+• owners can now delete students in the 'new' state
+
+Small tweaks
+• interview questions are now exported
+• interview questions are now shareable via email
+• student question order changed slightly to increase privacy
+• event permission icons added
+
+0.6.1 ***************
+Feature changes
+• Fixed bug causing some users to be unable to view events
+• loading indicator added when creating students called
+
+Bug fixes
+
+Small tweaks
+• reordered questions on interview
+• fixed spelling mistake
+
+
+0.6.0 ***************
+Feature changes
+• Interviews - you now have the ability to configure and ask followup interview questions for your candidates
+
+Bug fixes
+
+Small tweaks
+• user interface reviewed - 20+ changes to keep the interface & experience consistant on every screen. Graphics, fonts, forms all improved.
+
+
+0.5.0 ***************
+Feature changes
+• call candidates with phone numbers right from the application
+• share candidates: forward candidates and resumes via email to others
+
+Bug fixes
+
+Small tweaks
+• streamlined question options during event creation
+• new form fields: phone number, needs assessment
+• students now called candidates
+• rating a candidate is done only when event has associated programs
+• legal requirements met
+• added missing program ratings to export file
+
+
+
+
+0.4.0 ***************
+Feature changes
+• Captured resume images now save in the cloud and can be viewed by other collaborators
+• Improved User Interface, capturing and managing resume images now feels like a part of the app
+
+Bug fixes
+• Progress bar renders correctly
+
+Small tweaks
+• Small UI changes: modal, student details
+• Showing information when the lists are empty on why and how to populate them
+• Autmatically creating an invite code for each event
+
+0.3.0 ***************
+Feature changes
+• Improved User Interface, quickly add students, see more students at once, better resume text visibility
+• Added new form questions: GPA, Military Experience, US work status, Student Athlete
+• You can now pinch-to-zoom on the resume screen to review resume images
+
+Bug fixes
+• Cancel button on student edit page clears any inprocess edits.
+• Search box on the event list page now works.
+• Search box on the student list page now works.
+• Fix Android back button to properly cancel on the student edit page.
+• Fix student delete to also delete any assoicated images on the device.
+
+Small tweaks
+• Default the camera quality to 90.
+• Hide the keyboard accessory bar for navigating forms.
+• Fix Android issue where device back button could take the user to the Sign In screen when they are already signed in.
+• UI for students shows when a student has images on the device.
+• UI for students now allows customizable resume font sizes of small/medium/large.
+• Event list maintains scroll position when clicking through to see the students.
+• Student list maintains scroll position when clicking through to student details.
+• Student list now supports sorting by date and defaults to date descending.
+
+0.2.1 ***************
+• Refined Improved student capture screen to simplify readability, data input and resume capture access.
+• Graduation and Available dates now support months, not semesters.
+• New fonts and brand colors throughout the application.
+
+Bug Fixes:
+• prevented the clearing manually entered date fields when parsing a resume
+• large number of skills and relocations no longer spill off the screen
