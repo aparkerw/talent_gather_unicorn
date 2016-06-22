@@ -49,6 +49,13 @@ RSpec.describe ReleaseNotesTextParser, '#get_feature_sections' do
 end
 
 RSpec.describe ReleaseNotesTextParser, '#get_feature_items' do
-
+  context 'with valid section body text' do
+    it 'returns each line of text of the section when section is requested' do
+    end
+    it 'returns an empty array if there are no feature lines'do
+  end
+      it 'doesn\'t return lines missing bullet points' do 
+      end 
+  end
 end
 
