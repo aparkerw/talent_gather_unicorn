@@ -19,6 +19,7 @@ end
 RSpec.describe ReleaseNotesTextParser, '#get_version_number' do
   context 'with valid version text' do
     it 'returns the version correctly' do
+      version_ = version_sections(sample_text).select {first}
       # expect the version to be 0.3.0?
     end
   end
