@@ -4,6 +4,9 @@ RSpec.describe ReleaseNotesTextParser, '#get_version_sections' do
   context 'with version text' do
     it 'returns all the expected sections' do
       #expect the sample file to have given us 24 sections 
+      sample_text = File.read('spec/samples/release_notes_sample_full.txt')
+      version_sections = ReleaseNotesTextParser.get_version_sections(sample_text)
+      expect(version_sections.length).to eq 24
     end
   end
   context 'without text' do
