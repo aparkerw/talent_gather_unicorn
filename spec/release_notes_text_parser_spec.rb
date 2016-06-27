@@ -22,6 +22,7 @@ RSpec.describe ReleaseNotesTextParser, '#get_version_number' do
       version_number = version_sections(sample_text).select {number}
       expect version_number.first = "0.2.1"
       # expect the version to be 0.3.0?
+      
     end
   end
   context 'without version text' do
@@ -58,6 +59,9 @@ end
 RSpec.describe ReleaseNotesTextParser, '#get_feature_items' do
   context 'with valid section body text' do
     it 'returns each line of text of the section when section is requested' do
+      sample_text = File.read('spec/samples/feature_items_list_sample.txt')
+      feture_items = ReleaseNotesTextParser.get_feature_items(sample_text)
+      expect(fetaure_items.lines).to eq 6
     end
     it 'returns an empty array if there are no feature lines'do
   end
