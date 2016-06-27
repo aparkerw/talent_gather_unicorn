@@ -19,7 +19,8 @@ end
 RSpec.describe ReleaseNotesTextParser, '#get_version_number' do
   context 'with valid version text' do
     it 'returns the version correctly' do
-      version_ = version_sections(sample_text).select {first}
+      version_number = version_sections(sample_text).select {number}
+      expect version_number.first = "0.2.1"
       # expect the version to be 0.3.0?
     end
   end
@@ -33,6 +34,8 @@ end
 RSpec.describe ReleaseNotesTextParser, '#get_feature_sections' do
   context 'with valid version text' do
     it 'returns 3 sections when 3 are given' do
+      feature_sections = ReleaseNotesTextParser.get_feature_sections(sample_text)
+      expect(feature_sections)= ("Features", "Bug Fixes", "Small Tweaks")
       # expect the version to be 0.3.0?
     end
     it 'returns the correct 3 sections if given 3' do
