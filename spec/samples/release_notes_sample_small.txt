@@ -2,19 +2,19 @@ Release Notes:
 
 
 0.3.0 ***************
-Feature changes
+Features
 • Improved User Interface, quickly add students, see more students at once, better resume text visibility
 • Added new form questions: GPA, Military Experience, US work status, Student Athlete
 • You can now pinch-to-zoom on the resume screen to review resume images
 
-Bug fixes
+Bug Fixes
 • Cancel button on student edit page clears any inprocess edits.
 • Search box on the event list page now works.
 • Search box on the student list page now works.
 • Fix Android back button to properly cancel on the student edit page.
 • Fix student delete to also delete any assoicated images on the device.
 
-Small tweaks
+Small Tweaks
 • Default the camera quality to 90.
 • Hide the keyboard accessory bar for navigating forms.
 • Fix Android issue where device back button could take the user to the Sign In screen when they are already signed in.
