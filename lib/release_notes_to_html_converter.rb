@@ -11,7 +11,9 @@ class ReleaseNotesToHtmlConverter
     content = File.read('../spec/samples/release_notes_sample_full.txt');
     puts content;
     # call parser 
+   system('ruby release_notes_text_parser.rb')
     # get the pieces
+
     # turn them to html
     # write the output
     File.write('sample_output.txt', content);
@@ -21,5 +23,5 @@ end
 
 
 # irb
-# require './release_notes_to_html_converter.rb'
-# ReleaseNotesToHtmlConverter.parse_release_notes
+#require './release_notes_to_html_converter.rb'
+#ReleaseNotesToHtmlConverter.parse_release_notes

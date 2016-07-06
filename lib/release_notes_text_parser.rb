@@ -11,12 +11,23 @@ class ReleaseNotesTextParser
   end
 
   def self.get_feature_sections(version_section_text)
+<<<<<<< Updated upstream
   	matches = version_section_text.scan(/((Features|Bug Fixes|Small Tweaks)\n((?:• .*\n)+))/)
     sections = []
     matches.each do |match|
       sections << {:name => match[1],:items => match[2]}
     end
     sections
+=======
+<<<<<<< Updated upstream
+  	version_section_text.scan(/((?:Features|Bug Fixes|Small Tweaks)\n(?:(?:• .*\n)+))/)
+=======
+  	match = //.match(version_section_text)
+  	match [1] if match
+    # (Feature|Bug Fixes|Small tweaks)\n((• .*\n)+)?
+    "this is wrong"
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   end
 
   def self.get_feature_items(feature_section_items)
