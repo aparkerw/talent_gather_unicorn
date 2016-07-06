@@ -13,12 +13,12 @@ class ReleaseNotesToHtmlConverter
     # call parser 
    system('ruby release_notes_text_parser.rb')
     # get the pieces
-
+    self.get_version_sections(release_notes_text).call
     # turn them to html
     # write the output
     File.write('sample_output.txt', content);
   end
-
+ 
 end
 
 
