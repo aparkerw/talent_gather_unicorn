@@ -1,8 +1,7 @@
 class ReleaseNotesTextParser
 
   def self.get_version_sections(release_notes_text)
-    match =/(\d+\.\d+\.\d+) \*+(• .*\n)+/.match(release_notes_text)
-    match [1] if match
+ 	release_notes_text.scan(/((?:\d+\.){2}\d+\ \**\n(?:.*\n)+?(?=\d+\.\d+\.\d))/)
   end
 
   def self.get_version_number(version_section_text)
@@ -12,10 +11,7 @@ class ReleaseNotesTextParser
   end
 
   def self.get_feature_sections(version_section_text)
-  	match = //.match(version_section_text)
-  	match [1] if match
-    # (feature changes|bug fixes|small tweaks)\n((• .*\n)+)?
-    "this is wrong"
+  	version_section_text.scan(/((?:Features|Bug Fixes|Small Tweaks)\n(?:(?:• .*\n)+))/)
   end
 
   def self.get_feature_items(feature_section_items)
