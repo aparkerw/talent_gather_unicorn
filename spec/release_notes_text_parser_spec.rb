@@ -42,16 +42,16 @@ RSpec.describe ReleaseNotesTextParser, '#get_feature_sections' do
     end
     it 'returns the correct 3 sections if given 3' do
       feature_sections = ReleaseNotesTextParser.get_feature_sections(sample_text_single)
-      expect(feature_sections.map {|section| section.name }).to eq ["Bug Fixes", "Small Tweaks", "Features"]
+      expect(feature_sections.map {|section| section[:name] }).to eq ["Features", "Bug Fixes", "Small Tweaks"]
     end
     context 'bullet points' do
       it 'passes back bullet points when they exist' do
         feature_sections = ReleaseNotesTextParser.get_feature_sections(sample_text_single)
-        expect(feature_sections.first.items.index('• Improved User Interface')).to eq 0
+        expect(feature_sections.first[:items].index('• Improved User Interface')).to eq 0
       end
       it 'passes back nil when there are no bullet points' do
         feature_sections = ReleaseNotesTextParser.get_feature_sections('0.3.0 ***************\nFeatures\n\nBug Fixes\n\nSmall Tweaks')
-        expect(feature_sections.first.items).to be_nil
+        expect(feature_sections.length).to eq 0
       end
     end
   end
@@ -72,7 +72,7 @@ RSpec.describe ReleaseNotesTextParser, '#get_feature_items' do
     end
     it 'returns an empty array if there are no feature lines' do
       feature_items = ReleaseNotesTextParser.get_feature_items('')
-      expect(feature_items.length).to be_nil
+      expect(feature_items.length).to eq 0
     end
     it 'doesn\'t return lines missing bullet points' do 
       feature_items = ReleaseNotesTextParser.get_feature_items('line 1\n• line2\nline3')
