@@ -1,4 +1,4 @@
-require './release_notes_text_parser.rb'
+require_relative 'release_notes_text_parser'
 
 class ReleaseNotesToHtmlConverter
 
@@ -6,10 +6,10 @@ class ReleaseNotesToHtmlConverter
     "hello world! #{input.to_s}"
   end
 
-  def self.parse_release_notes
+  def self.parse_release_notes(path_to_file)
     # load the file
-    content = File.read('../spec/samples/release_notes_sample_full.txt');
-    html_file = open('myfile.out', 'w')
+    content = File.read(path_to_file)
+    html_file = open('output.html', 'w')
 
     # call parser and get the pieces
     versions = ReleaseNotesTextParser.get_version_sections(content)
@@ -25,16 +25,10 @@ class ReleaseNotesToHtmlConverter
       #loop and get the items
     end
     # turn them to html
-    # write the output
     html_file.close();
   end
  
 end
-
-
-# irb
-# require './release_notes_to_html_converter.rb'
-# ReleaseNotesToHtmlConverter.parse_release_notes
 
 
 =begin
