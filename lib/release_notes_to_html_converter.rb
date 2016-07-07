@@ -11,21 +11,37 @@ class ReleaseNotesToHtmlConverter
     content = File.read(path_to_file)
     html_file = open('output.html', 'w')
 
+
+    html_file.puts "<html>"
+    write_header html_file
+
     # call parser and get the pieces
     versions = ReleaseNotesTextParser.get_version_sections(content)
     versions.each do |version|
       # get the sections
-      puts version.class()
-      version_number = ReleaseNotesTextParser.get_version_number(version)
-      html_file.puts version_number
-      sections = ReleaseNotesTextParser.get_feature_sections(version)
+      version_number = ReleaseNotesTextParser.get_version_number(version.first)
+      html_file.puts "<b>#{version_number}</b>"
+      sections = ReleaseNotesTextParser.get_feature_sections(version.first)
+      html_file.puts "<ul>"
       sections.each do |section|
-        items = ReleaseNotesTextParser.get_feature_items(section)
-      end
+        html_file.puts "<b>#{section[:name]}</b>"
+        html_file.puts "<ul>"
+        items = ReleaseNotesTextParser.get_feature_items(section[:items])
+        items.each do |item|
+          html_file.puts "<li>#{item[0].gsub(/• /,'')}</li>"
+        end
+        html_file.puts "</ul>"
+       end
+       html_file.puts "</ul>"
       #loop and get the items
     end
+    html_file.puts "</html>"
     # turn them to html
     html_file.close();
+  end
+
+  def self.write_header(html_file)
+    html_file.puts '<head><meta charset="UTF-8"><style type="text/css">body {font-family:\'helvetica neue\'; }</style></head>'
   end
  
 end
