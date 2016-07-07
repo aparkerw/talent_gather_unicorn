@@ -9,26 +9,32 @@ class ReleaseNotesToHtmlConverter
   def self.parse_release_notes
     # load the file
     content = File.read('../spec/samples/release_notes_sample_full.txt');
-    puts content;
-    # call parser 
-   system('ruby release_notes_text_parser.rb')
-    # get the pieces
-    versions = ReleaseNotesTextParser.get_version_sections(release_notes_text)
+    html_file = open('myfile.out', 'w')
+
+    # call parser and get the pieces
+    versions = ReleaseNotesTextParser.get_version_sections(content)
     versions.each do |version|
       # get the sections
+      puts version.class()
+      version_number = ReleaseNotesTextParser.get_version_number(version)
+      html_file.puts version_number
+      sections = ReleaseNotesTextParser.get_feature_sections(version)
+      sections.each do |section|
+        items = ReleaseNotesTextParser.get_feature_items(section)
+      end
       #loop and get the items
     end
     # turn them to html
     # write the output
-    File.write('sample_output.txt', content);
+    html_file.close();
   end
  
 end
 
 
 # irb
-#require './release_notes_to_html_converter.rb'
-#ReleaseNotesToHtmlConverter.parse_release_notes
+# require './release_notes_to_html_converter.rb'
+# ReleaseNotesToHtmlConverter.parse_release_notes
 
 
 =begin
