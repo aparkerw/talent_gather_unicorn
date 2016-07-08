@@ -9,7 +9,7 @@ class ReleaseNotesToHtmlConverter
   def self.parse_release_notes(path_to_file)
     # load the file
     content = File.read(path_to_file)
-    html_file = open('output.html', 'w')
+    html_file = open('release_notes.html', 'w')
 
 
     html_file.puts "<html>"
