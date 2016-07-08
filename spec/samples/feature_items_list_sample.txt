@@ -1,0 +1,6 @@
+• Students can now be filtered by skills, programs or recrutier
+• Candidate edit screen highlight "program" rows to make it easier to select the right ranking.
+• Processing candidates includes timeouts in case of spotty network coverage.  Much more robust process when the network is unreliable.
+• Long lists of relocation locations are easier to use
+• Zoom buttons were added in desktop mode
+• Users who reconcile a candidate no longer show up as the last editor on the list screen
